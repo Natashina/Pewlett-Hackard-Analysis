@@ -1,6 +1,6 @@
 ### Pewlett-Hackard-Analysis
 
-# 1. Number of retiring employees by Title.
+# 1. Number of retiring employees by Title
 
 In order to get the table with retiring employees at first I've referred to the conceptual diagramm or ERD.
 
@@ -37,7 +37,7 @@ Using PARTITION BY (emp_no) statement, or Approach 2 (see below), I've removed d
 I've included GROUP BY title code to get del_1_2_count.csv file.
 del1_2_count_by_titles
 
-# 2. Mentorship Eligibility.
+# 2. Mentorship Eligibility
 
 To create a table with no duplicates I've used another code (Approach 2). 
 Example of the Query:
