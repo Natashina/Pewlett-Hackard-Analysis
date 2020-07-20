@@ -68,6 +68,6 @@ There are 240,124 currently employeed people and approximately 30% of them are a
 The main retiring titles are Senior Engineer and Senior Staff. The mentoring programm should help to make the transition smooth.
 According to our findings there are 1549 people who are potential and eligible mentors in the company.
 
-During the analysis it was discovered that there are some deficiencies in the original data. For instance, there are several people with TRUE statement instead of their first name. Therefore, the original data should be veryfied and updated.
+During the analysis it was discovered that there are some deficiencies in the original data. For instance, there are several people with TRUE statements instead of their first names. Therefore, the original data should be verified and updated.
 
 
