@@ -61,4 +61,5 @@ ORDER BY emp_no;
 
 The result is presented in del_2_mentor_elig_dedup.csv file.
 
-# 3. There are 240,124 currently employeed people and almost third of them are about to retire - 72,458.
+#3. There are 240,124 currently employeed people and about 30% of them are about to retire - 72,458 employees.
+The main retiring titles are Senior Engineer and Senior Staff.
