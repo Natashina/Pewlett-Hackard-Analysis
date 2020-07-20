@@ -11,7 +11,7 @@ In order to get the table with retiring employees at first I've referred to the 
 1.2 I've found the following example in order to deal with duplicates.
 https://stackoverflow.com/questions/19432913/select-info-from-table-where-row-has-max-date
 To eliminate duplicates at first I tried to use GROUP BY first name and last_name. However, the result was not correct, because these are not unique. There are some people in the company with exactly the same firt name and last name but different employee number.
-Here is example of my code:
+Here is example of Query (approach 1):
 
 SELECT  rt.emp_no,
 		rt.first_name,
@@ -35,9 +35,26 @@ Using PARTITION BY (emp_no) statement I've removed duplicates, I've created a ne
 I've included GROUP BY title code to get del_1_2_count.csv file.
 del1_2_count_by_titles
 
-# 2.
-del1_2_count_by_titles
-
-
+# 2. Mentorship Eligibility.
+To create a table with no duplicates I've used another code (Approach 2). 
+Example of the Query:
+SELECT 	emp_no,
+		first_name,
+		last_name,
+		title,
+		from_date,
+		to_date
+INTO total_cur_empl_with_title_dedup
+FROM
+(SELECT emp_no,
+		first_name,
+		last_name,
+		title,
+		from_date,
+		to_date, ROW_NUMBER() OVER
+(PARTITION BY (emp_no)
+ORDER BY from_date DESC) rn
+FROM total_cur_empl_with_title) tmp WHERE rn = 1
+ORDER BY emp_no;
 
 
