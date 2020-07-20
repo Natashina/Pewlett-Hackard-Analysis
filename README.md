@@ -31,7 +31,7 @@ Therefore, the correct number of people who are going to retire is 72,458.
 The results are shown in these two files: del_1_titles_retiring.csv file and del_1_3_ret_emp_with_title_dedup.csv.
 
 I've also created a Query into new table total_current_employees_with_title.
-Using PARTITION BY (emp_no) statement I've removed duplicates, I've created a new table total_cur_empl_with_title_dedup.
+Using PARTITION BY (emp_no) statement, or Approach 2 (see below), I've removed duplicates, I've created a new table total_cur_empl_with_title_dedup.
 I've included GROUP BY title code to get del_1_2_count.csv file.
 del1_2_count_by_titles
 
@@ -59,7 +59,13 @@ ORDER BY from_date DESC) rn
 FROM total_cur_empl_with_title) tmp WHERE rn = 1
 ORDER BY emp_no;
 
-The result is presented in del_2_mentor_elig_dedup.csv file.
+The outcome is presented in del_2_mentor_elig_dedup.csv file.
 
-#3. There are 240,124 currently employeed people and about 30% of them are about to retire - 72,458 employees.
-The main retiring titles are Senior Engineer and Senior Staff.
+# 3. Results and findings
+There are 240,124 currently employeed people and approximately 30% of them are about to retire - 72,458 employees.
+The main retiring titles are Senior Engineer and Senior Staff. The mentoring programm should help to make the transition smooth.
+According to our findings there are 1549 people who are potential and eligible mentors in the company.
+
+During the analysis it was discovered that there is some deficiencies in the original data. For instance, there are several people with TRUE statement in the first name column. Therefore, the original data should be veryfied and updated.
+
+
