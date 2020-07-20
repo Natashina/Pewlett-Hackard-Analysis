@@ -39,6 +39,7 @@ del1_2_count_by_titles
 
 To create a table with no duplicates I've used another code (Approach 2). 
 Example of the Query:
+
 SELECT 	emp_no,
 		first_name,
 		last_name,
@@ -59,3 +60,5 @@ FROM total_cur_empl_with_title) tmp WHERE rn = 1
 ORDER BY emp_no;
 
 The result is presented in del_2_mentor_elig_dedup.csv file.
+
+# 3. There are 240,124 currently employeed people and almost third of them are about to retire - 72,458.
