@@ -8,10 +8,12 @@ In order to get the table with retiring employees at first I've referred to the 
 
 1.1 I've created a new Query in pgAdmin. Since information about employees is stored in different datasets, the original csv files, I had to reffer to "employees", "title", "salary" and "dept_emp" tables and using INNER JOIN on emp_no combined this information in one table (ret_emp_with_title). I've also indicated bithdate by WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31') and included AND statement as (de.to_date = '9999-01-01').
 
-1.2 I've found the following example in order to deal with duplicates.
+1.2 Duplicates.
+Because many employees have been holding several positions in the company the Query described in 1.1 returned many duplicates. Here is a reference to a solution on how to remove duplicates with MAX to a date (Approach 1). 
 https://stackoverflow.com/questions/19432913/select-info-from-table-where-row-has-max-date
+
 To eliminate duplicates at first I tried to use GROUP BY first name and last_name. However, the result was not correct, because these are not unique. There are some people in the company with exactly the same firt name and last name but different employee number.
-Here is example of Query (approach 1):
+Below is a Query that returned right number of retiring employees (Approach 1):
 
 SELECT  rt.emp_no,
 		rt.first_name,
