@@ -36,6 +36,7 @@ I've included GROUP BY title code to get del_1_2_count.csv file.
 del1_2_count_by_titles
 
 # 2. Mentorship Eligibility.
+
 To create a table with no duplicates I've used another code (Approach 2). 
 Example of the Query:
 SELECT 	emp_no,
@@ -57,4 +58,4 @@ ORDER BY from_date DESC) rn
 FROM total_cur_empl_with_title) tmp WHERE rn = 1
 ORDER BY emp_no;
 
-
+The result is presented in del_2_mentor_elig_dedup.csv file.
