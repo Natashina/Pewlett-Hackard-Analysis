@@ -64,6 +64,7 @@ ORDER BY emp_no;
 The outcome is presented in del_2_mentor_elig_dedup.csv file.
 
 # 3. Results and findings
+
 There are 240,124 currently employeed people and approximately 30% of them are about to retire - 72,458 employees.
 The main retiring titles are Senior Engineer and Senior Staff. The mentoring programm should help to make the transition smooth.
 According to our findings there are 1549 people who are potential and eligible mentors in the company.
